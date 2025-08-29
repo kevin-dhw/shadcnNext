@@ -61,7 +61,6 @@ export default function Dashboard() {
             const tempHeight = divRef.current?.clientHeight;
             setHeight(tempHeight || 0);
             console.log(height);
-
             setShow(!show);
           }}
         >

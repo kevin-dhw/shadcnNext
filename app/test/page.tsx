@@ -4,11 +4,15 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { renderData, statueMap } from "./data";
 import classNames from "classnames";
-import BgImg from "./img/house.png";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Test = () => {
   const [show, setShow] = React.useState(false);
   const innerRef = useRef<HTMLDivElement>(null);
+
+  const { theme, toggleTheme } = useTheme();
+  console.log(theme, "theme");
+
   return (
     <div className=" flex flex-col">
       <div
@@ -17,6 +21,9 @@ const Test = () => {
         }}
       >
         增加
+      </div>
+      <div onClick={toggleTheme} className=" dark:bg-amber-200">
+        changeTheme
       </div>
       <div
         style={{ height: show ? "200px" : "0px" }}

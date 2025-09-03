@@ -2,10 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { checkUser } from "@/lib/clerkUser";
 import { SignInButton } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 
-export default function Home() {
-  const user = checkUser();
-  console.log(user, "user");
+export default async function Home() {
+  const user = await currentUser();
+  console.log(user, "currentUsercurrentUser");
+
   return (
     <div className="">
       <SignInButton>

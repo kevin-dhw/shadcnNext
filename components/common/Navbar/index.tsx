@@ -9,7 +9,8 @@ export default function Navbar() {
   return (
     <div>
       <UserButton />
-      <SignInButton />
+      <SignedOut>退出登录</SignedOut>
+      <div>3445</div>
       Navbar<span></span>
     </div>
   );

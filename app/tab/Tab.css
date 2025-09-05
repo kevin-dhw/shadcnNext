@@ -1,0 +1,26 @@
+.tab {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-content {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .tab-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+  }
+  
+  .tab-line.hovered {
+    width: 100%;
+  }

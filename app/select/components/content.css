@@ -1,0 +1,14 @@
+@keyframes bottomToUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.anima-in {
+    animation: bottomToUp 0.2s ease forwards;
+}

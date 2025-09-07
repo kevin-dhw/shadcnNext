@@ -16,7 +16,7 @@ const Select = () => {
               selected: true,
             },
           ];
-          contentRef.current?.open(data, extraData, (item) => {
+          contentRef.current?.open(data, [], (item) => {
             console.log(item, "item");
           });
         }}

@@ -35,8 +35,7 @@ const InnerContent: ForwardRefRenderFunction<ContentRefs, ContentProps> = (
     setShow(false);
   };
   const open = (data: any[], extraData: any[], cb: (item: any[]) => void) => {
-    const finalData = handleData(data, extraData);
-    setOpenData({ data: finalData, cb });
+    setOpenData({ data: handleData(data, extraData), cb });
     setShow(true);
   };
   const handleData = (data: any[], extraData: any[]) => {

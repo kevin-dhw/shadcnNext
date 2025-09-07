@@ -12,11 +12,7 @@ const Select = () => {
         onClick={() => {
           const extraData = [
             {
-              value: " CSS",
-              selected: true,
-            },
-            {
-              value: " Vue",
+              value: " React",
               selected: true,
             },
           ];

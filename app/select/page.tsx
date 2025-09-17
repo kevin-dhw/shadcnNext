@@ -47,6 +47,21 @@ const Select = () => {
           <div className=" bg-red-500">22</div>
         </div>
       </div>
+      <br />
+      <div
+        onClick={(e: React.MouseEvent) => {
+          e.stopPropagation();
+          console.log("1233");
+        }}
+      >
+        冒泡
+      </div>
+      <input
+        className=" border"
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          console.log(e.target.value, "werr");
+        }}
+      ></input>
     </div>
   );
 };

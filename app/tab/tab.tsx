@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Tab.css";
 
 interface TabProps {
@@ -9,6 +9,14 @@ interface TabProps {
 
 const Tab: React.FC<TabProps> = ({ title }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const getData = async () => {
+    const response = await fetch(`/api/friend/list?page=${1}`);
+    console.log(response, "response");
+  };
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     // 112234433
